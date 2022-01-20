@@ -16,12 +16,10 @@
 //     [10,  9,  8, 7]]
 
 function matrix(n) {
-  let x = 1;
-
-  let arr = [];  
+  let arr = [];
 
   for (let i = 0; i < n; i++) {
-    let innerArr = []
+    let innerArr = [];
     for (let j = 0; j < n; j++) {
       innerArr.push(0);
     }
@@ -35,18 +33,17 @@ function matrix(n) {
   let endRow = n - 1;
   let startCol = 0;
 
-  const finalNum = n*n;
+  const finalNum = n * n;
 
   /**
-   * 0 - left
+   * 0 - right
    * 1 - down
-   * 2 - right
+   * 2 - left
    * 3 - up
    */
   let i = 0;
-  
-  while (curNum <= finalNum) {
 
+  while (curNum <= finalNum) {
     const dir = i % 4;
     i++;
 
@@ -76,8 +73,6 @@ function matrix(n) {
       startCol++;
     }
   }
-
-  console.log("ARR : ", arr);
 
   return arr;
 }
